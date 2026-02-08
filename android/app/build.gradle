@@ -1,0 +1,31 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.example.rustiching'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.rustiching"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+    }
+    
+    // 这一步告诉 Android 在哪里找 Rust 编译好的 .so 文件
+    // 在 GitHub Actions 中，我们将把编译好的 so 放到 src/main/jniLibs 下
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['src/main/jniLibs']
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.8.0'
+}
