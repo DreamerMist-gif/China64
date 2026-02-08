@@ -18,8 +18,6 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
     
-    # Fix: Install Gradle 8.0 explicitly because AGP 8.0.2 is not compatible with Gradle 9+
-    # (The default environment now uses Gradle 9, causing the build failure)
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@v3
       with:
