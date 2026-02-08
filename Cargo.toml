@@ -1,0 +1,13 @@
+[package]
+name = "rust_iching"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+jni = "0.21"
+rand = "0.8"
+rand_chacha = "0.3"
+chrono = "0.4"
