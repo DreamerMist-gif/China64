@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // 动态构建UI
+        // Dynamically build UI (No XML required)
         val layout = LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL
             setPadding(50, 80, 50, 50)
@@ -130,8 +130,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
 
         val sb = StringBuilder()
         sb.append("种子: $seed\n时间: $timestamp\n\n【卦象】\n")
-        var originalBits = 0; var changedBits = 0
-
+        
         for (i in 5 downTo 0) {
             val yao = hexagramNums[i]
             val graph = when(yao) {
@@ -139,4 +138,4 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
                 7 -> "——————   (少阳)"
                 8 -> "——  ——   (少阴)"
                 9 -> "—————— O (老阳)"
-       
+                e
