@@ -138,4 +138,10 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
                 7 -> "——————   (少阳)"
                 8 -> "——  ——   (少阴)"
                 9 -> "—————— O (老阳)"
-                e
+                else -> "——————   (少阳)"
+            }
+            sb.append(graph).append("\n")
+        }
+        resultText.text = sb.toString()
+    }
+}
